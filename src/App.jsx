@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Header from "./Components/Header";
 import ProductList from "./Components/Productlist";
+import Cart from "./Components/Cart";
 
 export default function App() {
   const [cart, setCart] = useState([]);
+  const[totalAmt , setAmt] = useState(0);
 
   const products = [
     {
@@ -24,6 +26,7 @@ export default function App() {
 
   function addToCart(product) {
     setCart([...cart, product]);
+    setAmt(totalAmt+product.price);
   }
 
   // function removeFromCart(index) {
@@ -31,19 +34,20 @@ export default function App() {
   //   setCart(updatedCart);
   // }
 
-  const totalAmount = cart.reduce(
+  /*const totalAmount = cart.reduce(
     (total, item) => total + item.price,
     0
-  );
+  );*/
 
   return (
     <div>
-      <Header cartCount={cart.length} totalAmount={totalAmount} />
+      <Header cartCount={cart.length}  />
 
       <ProductList
         products={products}
         addToCart={addToCart}
       />
+      <Cart totalAmt={totalAmt} />
       
     </div>
   );

@@ -1,11 +1,11 @@
 import Productcard from "./Productcard";
-export default function ProductList({products,addtocart}){
+export default function ProductList({products,addToCart}){
     return(
         <div>
 {products.map(product=> <Productcard
  key={product.id}
 product={product}
-addtocart={addtocart}/>
+addtocart={addToCart}/>
 )}
 
         </div>
