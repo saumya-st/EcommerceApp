@@ -2,6 +2,8 @@ import { useState } from "react";
 import Header from "./Components/Header";
 import ProductList from "./Components/Productlist";
 import Cart from "./Components/Cart";
+import Search from "./Components/search";
+import './App.css'
 
 export default function App() {
   const [cart, setCart] = useState([]);
@@ -41,6 +43,7 @@ export default function App() {
 
   return (
     <div>
+      <Search/>
       <Header cartCount={cart.length}  />
 
       <ProductList

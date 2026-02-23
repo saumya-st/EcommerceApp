@@ -1,7 +1,7 @@
 import{useState} from 'react';
 export default function Search() {
     const[find, setFind] = useState("");
-    const name=["john","doe","jane","smith"];
+    const name=["Laptop","Charger"];
     const student=name.filter((names)=>names.toLowerCase().includes(find.toLowerCase()));
     return(
         <>
