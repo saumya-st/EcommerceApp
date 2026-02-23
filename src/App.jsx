@@ -29,10 +29,10 @@ export default function App() {
     setAmt(totalAmt+product.price);
   }
 
-  // function removeFromCart(index) {
-  //   const updatedCart = cart.filter((_, i) => i !== index);
-  //   setCart(updatedCart);
-  // }
+  function removeFromCart(index) {
+    const updatedCart = cart.filter((_, i) => i !== index);
+    setCart(updatedCart);
+  }
 
   /*const totalAmount = cart.reduce(
     (total, item) => total + item.price,
@@ -52,3 +52,16 @@ export default function App() {
     </div>
   );
 }
+//  import { useEffect } from "react";
+//  import './App.css'
+//  function App(){
+//   useEffect(()=>{console.log("Welcome")},[])
+//   useEffect(()=>{console.log("Welcome")},[])
+
+//   return(
+//     <>
+//     <h1>MY APP</h1>
+//     </>
+//   )
+//  }
+//  export default App
