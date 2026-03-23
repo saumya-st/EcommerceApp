@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import ProductList from "./Components/Productlist";
 import Cart from "./Components/Cart";
 import Search from "./Components/search";
+import React from "react";
 import './App.css'
 
 export default function App() {

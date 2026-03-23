@@ -1,4 +1,4 @@
-
+import React from "react";
 export default function Header({ cartCount, totalAmount }) {
   return (
     <div>

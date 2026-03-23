@@ -1,4 +1,5 @@
 import{useState} from 'react';
+import React from "react";
 export default function Search() {
     const[find, setFind] = useState("");
     const name=["Laptop","Charger"];
