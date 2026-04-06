@@ -104,34 +104,26 @@
 
 
 
-import { useState } from "react";
-import Header from "./Components/Header";
-import ProductList from "./Components/Productlist";
-import Cart from "./Components/Cart";
-import Search from "./Components/search";
-import React from "react";
-import './App.css'
-
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Navbar from "./Components/Navbar";
-
+import { BrowserRouter , Routes ,Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
+import Details from './components/Details'
 
-const App = () => {
-  return (
+const App=()=>
+{
+  return(
     <BrowserRouter>
-      <Navbar />
+    <Navbar/>
+    <Routes>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-
-      
+      <Route path="/Home" element={<Home/>}/>
+      <Route path="/About" element={<About/>}/>
+      <Route path="/details/:id" element={<Details/>}/>
+    </Routes>
+    
+    
     </BrowserRouter>
-  );
-};
-
+  )
+}
 export default App;

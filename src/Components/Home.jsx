@@ -5,7 +5,7 @@ const Home =()=>{
 
         
         <h1>Welcome to KIET university</h1>
-        <h3>delhi-ncr-primne</h3>
+        <h3>delhi-ncr-prime</h3>
        
         </div>
     )
